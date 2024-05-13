@@ -13,10 +13,19 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.8;
+  background: #f5f5f4;
+  color: #1c1c1c;
 }
 
 #container {
   max-width: 70ch;
   width: fit-content;
   margin-inline: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #18181b;
+    color: #f9fafb;
+  }
 }
