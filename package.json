@@ -1,0 +1,46 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "hello-world",
+  "title": "Hello World",
+  "description": "",
+  "icon": "command-icon.png",
+  "author": "tnixc",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "clipboard-reader",
+      "title": "Run Script",
+      "description": "Open the current clipboard in a nice reader view",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "css",
+      "type": "textfield",
+      "title": "Link to css file for the content",
+      "description": "The link to the CSS file that will be used to style the content.",
+      "default": "https://utfs.io/f/2844eebb-33a8-4727-8edf-18e4cfbf3b65-1tcz3l.css",
+      "required": true
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.71.4"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.6",
+    "@types/node": "20.8.10",
+    "@types/react": "18.2.27",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  },
+  "trustedDependencies": ["@raycast/api"]
+}
