@@ -20,7 +20,7 @@
       "type": "textfield",
       "title": "Link to css file for the content",
       "description": "The link to the CSS file that will be used to style the content.",
-      "default": "https://utfs.io/f/2844eebb-33a8-4727-8edf-18e4cfbf3b65-1tcz3l.css",
+      "default": "https://raw.githubusercontent.com/Tnixc/rayread/main/style.css",
       "required": true
     }
   ],
