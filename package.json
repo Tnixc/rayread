@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "hello-world",
-  "title": "Hello World",
-  "description": "",
+  "name": "rayread",
+  "title": "Rayread",
+  "description": "Put text from your clipboard into a pretty reader view",
   "icon": "command-icon.png",
   "author": "tnixc",
   "license": "MIT",
