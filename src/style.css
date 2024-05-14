@@ -19,24 +19,6 @@
   --tw-prose-pre-bg: #1f2937;
   --tw-prose-th-borders: #d1d5db;
   --tw-prose-td-borders: #e5e7eb;
-  --tw-prose-invert-body: #d1d5db;
-  --tw-prose-invert-headings: #fff;
-  --tw-prose-invert-lead: #9ca3af;
-  --tw-prose-invert-links: #fff;
-  --tw-prose-invert-bold: #fff;
-  --tw-prose-invert-counters: #9ca3af;
-  --tw-prose-invert-bullets: #4b5563;
-  --tw-prose-invert-hr: #374151;
-  --tw-prose-invert-quotes: #f3f4f6;
-  --tw-prose-invert-quote-borders: #374151;
-  --tw-prose-invert-captions: #9ca3af;
-  --tw-prose-invert-kbd: #fff;
-  --tw-prose-invert-kbd-shadows: 255 255 255;
-  --tw-prose-invert-code: #fff;
-  --tw-prose-invert-pre-code: #d1d5db;
-  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
-  --tw-prose-invert-th-borders: #4b5563;
-  --tw-prose-invert-td-borders: #374151;
   font-size: 1rem;
   line-height: 1.75;
 }
@@ -56,7 +38,7 @@ body {
 }
 
 #container {
-  max-width: min(70ch, calc(100vw - 2rem));
+  max-width: min(600px, calc(100vw - 2rem));
   width: fit-content;
   margin-inline: auto;
 }
@@ -81,26 +63,27 @@ body {
   --tw-prose-th-borders: #d1d5db;
   --tw-prose-td-borders: #e5e7eb;
 }
+
 @media (prefers-color-scheme: dark) {
   .prose {
-    --tw-prose-body: #f8f8f8;
-    --tw-prose-headings: #ffffff;
-    --tw-prose-lead: #cccccc;
-    --tw-prose-links: #4ea8ff;
-    --tw-prose-bold: #f0f0f0;
-    --tw-prose-counters: #a0a7b6;
-    --tw-prose-bullets: #3a3a3a;
-    --tw-prose-hr: #2b2a27;
-    --tw-prose-quotes: #ffffff;
-    --tw-prose-quote-borders: #2b2a27;
-    --tw-prose-captions: #a0a7b6;
-    --tw-prose-kbd: #ffffff;
-    --tw-prose-kbd-shadows: 17 24 39;
-    --tw-prose-code: #ffffff;
-    --tw-prose-pre-code: #f8f8f8;
-    --tw-prose-pre-bg: #0e141b;
-    --tw-prose-th-borders: #3a3a3a;
-    --tw-prose-td-borders: #2b2a27;
+    --tw-prose-body: #d1d5db;
+    --tw-prose-headings: #fff;
+    --tw-prose-lead: #9ca3af;
+    --tw-prose-links: #fff;
+    --tw-prose-bold: #fff;
+    --tw-prose-counters: #9ca3af;
+    --tw-prose-bullets: #4b5563;
+    --tw-prose-hr: #374151;
+    --tw-prose-quotes: #f3f4f6;
+    --tw-prose-quote-borders: #374151;
+    --tw-prose-captions: #9ca3af;
+    --tw-prose-kbd: #fff;
+    --tw-prose-kbd-shadows: 255 255 255;
+    --tw-prose-code: #fff;
+    --tw-prose-pre-code: #d1d5db;
+    --tw-prose-pre-bg: rgb(0 0 0 / 50%);
+    --tw-prose-th-borders: #4b5563;
+    --tw-prose-td-borders: #374151;
   }
 }
 
@@ -568,5 +551,6 @@ body {
 }
 
 img {
-  max-width: 70ch;
+  max-width: min(600px, calc(100vw - 2rem));
+  border-radius: 0.25rem;
 }
