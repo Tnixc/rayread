@@ -3,13 +3,15 @@ import { writeFile } from "fs/promises";
 import { join } from "path";
 
 export default async function main() {
-  const DATA = await Clipboard.readText();
   const CSS_URL: string = getPreferenceValues().css;
+  const FILE = join("tmp", "raycast_reader.html");
+
+  const DATA = await Clipboard.readText();
   if (!DATA) {
     await showHUD("No data in clipboard");
     return;
   }
-  const FILE = join("tmp", "raycast_reader.html");
+
   const TEMPLATE = `
     <head>
     <title>Raycast Reader</title>

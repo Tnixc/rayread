@@ -8,14 +8,17 @@ export default async () => {
     await showToast({ title: "This script requires access to the browser extension", style: Toast.Style.Failure });
     return;
   }
+
   const CONTENT = await BrowserExtension.getContent({ format: "markdown" });
-  const DATA = await marked.parse(CONTENT);
   const CSS_URL: string = getPreferenceValues().css;
+  const FILE = join("tmp", "raycast_reader.html");
+
+  const DATA = await marked.parse(CONTENT);
   if (!DATA) {
-    await showHUD("No data in clipboard");
+    await showHUD("No data in browser");
     return;
   }
-  const FILE = join("tmp", "raycast_reader.html");
+
   let title = await BrowserExtension.getTabs().then((tabs) => tabs.filter((tab) => tab.active)[0].title);
   if (!title) {
     title = "Raycast Reader";

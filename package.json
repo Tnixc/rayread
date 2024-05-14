@@ -3,19 +3,19 @@
   "name": "rayread",
   "title": "Rayread",
   "description": "Put text from your clipboard into a pretty reader view",
-  "icon": "command-icon.png",
+  "icon": "icon.png",
   "author": "tnixc",
   "license": "MIT",
   "commands": [
     {
       "name": "clipboard-reader",
-      "title": "Read from clipboard",
+      "title": "Reader from clipboard",
       "description": "Open the current clipboard in a nice reader view",
       "mode": "no-view"
     },
     {
       "name": "browser",
-      "title": "Read from browser",
+      "title": "Reader from browser",
       "description": "Open the current browser content in a nice reader view",
       "mode": "no-view"
     }
@@ -49,7 +49,5 @@
     "lint": "ray lint",
     "publish": "npx @raycast/api@latest publish"
   },
-  "trustedDependencies": [
-    "@raycast/api"
-  ]
+  "trustedDependencies": ["@raycast/api"]
 }
