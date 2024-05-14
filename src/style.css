@@ -22,6 +22,7 @@
   font-size: 1rem;
   line-height: 1.75;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -37,10 +38,11 @@ body {
   line-height: 2;
 }
 
-#container {
+.prose {
   max-width: min(600px, calc(100vw - 2rem));
   width: fit-content;
   margin-inline: auto;
+  color: var(--tw-prose-body);
 }
 
 .prose {
@@ -87,15 +89,12 @@ body {
   }
   body {
     background: #1c1c1c;
-    color: var(--tw-prose-body);
   }
 }
 
-) .prose {
+.prose {
   color: var(--tw-prose-body);
-  max-width: 65ch;
 }
-
 .prose :where(p):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   margin-top: 1.25em;
   margin-bottom: 1.25em;

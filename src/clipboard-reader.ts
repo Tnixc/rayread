@@ -16,7 +16,7 @@ export default async function main() {
       <link rel="stylesheet" type="text/css" href="${CSS_URL}" />
     </head>
     <body>
-    <article id="container" class="prose">
+    <article class="prose">
     ${DATA}
     </article>
     </body>
