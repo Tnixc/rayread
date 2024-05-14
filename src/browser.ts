@@ -10,16 +10,20 @@ export default async () => {
   }
   const CONTENT = await BrowserExtension.getContent({ format: "markdown" });
   const DATA = await marked.parse(CONTENT);
-  console.log(DATA);
   const CSS_URL: string = getPreferenceValues().css;
   if (!DATA) {
     await showHUD("No data in clipboard");
     return;
   }
   const FILE = join("tmp", "raycast_reader.html");
+  let title = await BrowserExtension.getTabs().then((tabs) => tabs.filter((tab) => tab.active)[0].title);
+  if (!title) {
+    title = "Raycast Reader";
+  }
+
   const TEMPLATE = `
     <head>
-    <title>Raycast Reader</title>
+    <title>Rayread - ${title}</title>
       <link rel="stylesheet" type="text/css" href="${CSS_URL}" />
     </head>
     <body>

@@ -1,5 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 
+.prose {
+  --tw-prose-body: #374151;
+  --tw-prose-headings: #111827;
+  --tw-prose-lead: #4b5563;
+  --tw-prose-links: #111827;
+  --tw-prose-bold: #111827;
+  --tw-prose-counters: #6b7280;
+  --tw-prose-bullets: #d1d5db;
+  --tw-prose-hr: #e5e7eb;
+  --tw-prose-quotes: #111827;
+  --tw-prose-quote-borders: #e5e7eb;
+  --tw-prose-captions: #6b7280;
+  --tw-prose-kbd: #111827;
+  --tw-prose-kbd-shadows: 17 24 39;
+  --tw-prose-code: #111827;
+  --tw-prose-pre-code: #e5e7eb;
+  --tw-prose-pre-bg: #1f2937;
+  --tw-prose-th-borders: #d1d5db;
+  --tw-prose-td-borders: #e5e7eb;
+  --tw-prose-invert-body: #d1d5db;
+  --tw-prose-invert-headings: #fff;
+  --tw-prose-invert-lead: #9ca3af;
+  --tw-prose-invert-links: #fff;
+  --tw-prose-invert-bold: #fff;
+  --tw-prose-invert-counters: #9ca3af;
+  --tw-prose-invert-bullets: #4b5563;
+  --tw-prose-invert-hr: #374151;
+  --tw-prose-invert-quotes: #f3f4f6;
+  --tw-prose-invert-quote-borders: #374151;
+  --tw-prose-invert-captions: #9ca3af;
+  --tw-prose-invert-kbd: #fff;
+  --tw-prose-invert-kbd-shadows: 255 255 255;
+  --tw-prose-invert-code: #fff;
+  --tw-prose-invert-pre-code: #d1d5db;
+  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
+  --tw-prose-invert-th-borders: #4b5563;
+  --tw-prose-invert-td-borders: #374151;
+  font-size: 1rem;
+  line-height: 1.75;
+}
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +56,7 @@ body {
 }
 
 #container {
-  max-width: 70ch;
+  max-width: min(70ch, calc(100vw - 2rem));
   width: fit-content;
   margin-inline: auto;
 }
@@ -28,20 +68,19 @@ body {
   --tw-prose-links: #2563eb;
   --tw-prose-bold: #101010;
   --tw-prose-counters: #6b7280;
-  --tw-prose-bullets: #d1d5db;
+  --tw-prose-bullets: #6b7280;
   --tw-prose-hr: #e2e0dc;
-  --tw-prose-quotes: #111827;
+  --tw-prose-quotes: #111111;
   --tw-prose-quote-borders: #e2e0dc;
   --tw-prose-captions: #6b7280;
-  --tw-prose-kbd: #111827;
+  --tw-prose-kbd: #111111;
   --tw-prose-kbd-shadows: 17 24 39;
-  --tw-prose-code: #111827;
-  --tw-prose-pre-code: #e5e7eb;
-  --tw-prose-pre-bg: #1f2937;
+  --tw-prose-code: #111111;
+  --tw-prose-pre-code: #09090b;
+  --tw-prose-pre-bg: #d6d3d1;
   --tw-prose-th-borders: #d1d5db;
   --tw-prose-td-borders: #e5e7eb;
 }
-
 @media (prefers-color-scheme: dark) {
   .prose {
     --tw-prose-body: #f8f8f8;
@@ -58,14 +97,14 @@ body {
     --tw-prose-kbd: #ffffff;
     --tw-prose-kbd-shadows: 17 24 39;
     --tw-prose-code: #ffffff;
-    --tw-prose-pre-code: #0e141b;
-    --tw-prose-pre-bg: #f8f8f8;
+    --tw-prose-pre-code: #f8f8f8;
+    --tw-prose-pre-bg: #0e141b;
     --tw-prose-th-borders: #3a3a3a;
     --tw-prose-td-borders: #2b2a27;
   }
 }
 
-.prose {
+) .prose {
   color: var(--tw-prose-body);
   max-width: 65ch;
 }
@@ -420,47 +459,6 @@ body {
   font-size: 0.875em;
   line-height: 1.4285714;
   margin-top: 0.8571429em;
-}
-
-.prose {
-  --tw-prose-body: #374151;
-  --tw-prose-headings: #111827;
-  --tw-prose-lead: #4b5563;
-  --tw-prose-links: #111827;
-  --tw-prose-bold: #111827;
-  --tw-prose-counters: #6b7280;
-  --tw-prose-bullets: #d1d5db;
-  --tw-prose-hr: #e5e7eb;
-  --tw-prose-quotes: #111827;
-  --tw-prose-quote-borders: #e5e7eb;
-  --tw-prose-captions: #6b7280;
-  --tw-prose-kbd: #111827;
-  --tw-prose-kbd-shadows: 17 24 39;
-  --tw-prose-code: #111827;
-  --tw-prose-pre-code: #e5e7eb;
-  --tw-prose-pre-bg: #1f2937;
-  --tw-prose-th-borders: #d1d5db;
-  --tw-prose-td-borders: #e5e7eb;
-  --tw-prose-invert-body: #d1d5db;
-  --tw-prose-invert-headings: #fff;
-  --tw-prose-invert-lead: #9ca3af;
-  --tw-prose-invert-links: #fff;
-  --tw-prose-invert-bold: #fff;
-  --tw-prose-invert-counters: #9ca3af;
-  --tw-prose-invert-bullets: #4b5563;
-  --tw-prose-invert-hr: #374151;
-  --tw-prose-invert-quotes: #f3f4f6;
-  --tw-prose-invert-quote-borders: #374151;
-  --tw-prose-invert-captions: #9ca3af;
-  --tw-prose-invert-kbd: #fff;
-  --tw-prose-invert-kbd-shadows: 255 255 255;
-  --tw-prose-invert-code: #fff;
-  --tw-prose-invert-pre-code: #d1d5db;
-  --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
-  --tw-prose-invert-th-borders: #4b5563;
-  --tw-prose-invert-td-borders: #374151;
-  font-size: 1rem;
-  line-height: 1.75;
 }
 
 .prose :where(picture > img):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
