@@ -1,9 +1,16 @@
-import { showHUD, Clipboard, open, getPreferenceValues } from "@raycast/api";
+import { BrowserExtension, Toast, environment, getPreferenceValues, open, showHUD, showToast } from "@raycast/api";
+import { marked } from "marked";
 import { writeFile } from "fs/promises";
 import { join } from "path";
 
-export default async function main() {
-  const DATA = await Clipboard.readText();
+export default async () => {
+  if (!environment.canAccess(BrowserExtension)) {
+    await showToast({ title: "This script requires access to the browser extension", style: Toast.Style.Failure });
+    return;
+  }
+  const CONTENT = await BrowserExtension.getContent({ format: "markdown" });
+  const DATA = await marked.parse(CONTENT);
+  console.log(DATA);
   const CSS_URL: string = getPreferenceValues().css;
   if (!DATA) {
     await showHUD("No data in clipboard");
@@ -23,4 +30,4 @@ export default async function main() {
     `;
   await writeFile(FILE, TEMPLATE);
   await open(FILE);
-}
+};

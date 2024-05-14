@@ -9,8 +9,14 @@
   "commands": [
     {
       "name": "clipboard-reader",
-      "title": "Run Script",
+      "title": "Read from clipboard",
       "description": "Open the current clipboard in a nice reader view",
+      "mode": "no-view"
+    },
+    {
+      "name": "browser",
+      "title": "Read from browser",
+      "description": "Open the current browser content in a nice reader view",
       "mode": "no-view"
     }
   ],
@@ -25,7 +31,8 @@
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.71.4"
+    "@raycast/api": "^1.73.3",
+    "marked": "^12.0.2"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.6",
@@ -42,5 +49,7 @@
     "lint": "ray lint",
     "publish": "npx @raycast/api@latest publish"
   },
-  "trustedDependencies": ["@raycast/api"]
+  "trustedDependencies": [
+    "@raycast/api"
+  ]
 }
