@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   margin: 0;
@@ -567,4 +567,8 @@ body {
 
 .prose :where(.prose > :last-child):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   margin-bottom: 0;
+}
+
+img {
+  max-width: 70ch;
 }
