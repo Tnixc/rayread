@@ -33,6 +33,7 @@ export default async () => {
     <article class="prose">
     ${DATA}
     </article>
+      <style>@import url(${CSS_URL});</style>
     </body>
     `;
   await writeFile(FILE, TEMPLATE);
